@@ -18,7 +18,7 @@ for(let i = 0; i <= 15; i++)
     for(let n = 0; n <= 15; n++)
     {
         innerDivs[n] = document.createElement("div");
-        innerDivs[n].setAttribute('style', 'border-color:black; border-style: solid; width:20px; height:20px;')
+        innerDivs[n].setAttribute('style', 'border-color:black; border-style: solid; width: 20px; height: 20px;')
         divs[i].appendChild(innerDivs[n]);
 
         innerDivs[n].addEventListener("mouseover", (event) => {
