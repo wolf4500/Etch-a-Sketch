@@ -1,27 +1,30 @@
 const GRIDSIZE = 600;
-let rows = 16;
-let cols = 16;
+let squaresPerSide = 16;
 
 // Set width and height of sketch area
 const sketchArea = document.querySelector("#sketch-area");
 sketchArea.style.width = `${GRIDSIZE}px`;
 sketchArea.style.height = `${GRIDSIZE}px`;
 
-function changeBackgroundColor() {
+function fillGrid() {
     this.style.backgroundColor = "black";
 }
 
 // Create Grid
 function createGrid(){
-    for(let i = 0; i < rows * cols; i++) {
+    const totalSquares = squaresPerSide * squaresPerSide;
+    const widthOrHeight = `${(GRIDSIZE / squaresPerSide) - 2}px`;
+    
+    for(let i = 0; i < totalSquares; i++) {
         gridCell = document.createElement("div");
 
-        gridCell.style.width = `${(GRIDSIZE / cols) - 2}px`;
-        gridCell.style.height = `${(GRIDSIZE / rows) - 2}px`;
+        gridCell.style.width = widthOrHeight;
+        gridCell.style.height = widthOrHeight;
         gridCell.classList.add("cell");
 
         sketchArea.appendChild(gridCell);
-        gridCell.addEventListener("mouseover", changeBackgroundColor);
+
+        gridCell.addEventListener("mouseover", fillGrid);
     }
 }
 
