@@ -4,7 +4,7 @@
 }
 
 body { 
-    background-color: aliceblue;
+    background-color: #DDE3DD;
 }
 
 #sketch-area {
@@ -12,6 +12,7 @@ body {
     flex-wrap: wrap;
     margin: 100px auto; 
     background-color: white;
+    box-shadow: 10px 10px rgba(0, 170, 225, 0.065);
 }
 
 .cell {
