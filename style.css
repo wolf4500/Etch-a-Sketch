@@ -1,12 +1,19 @@
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: 500px;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-body {
+body { 
+    background-color: aliceblue;
+}
+
+#sketch-area {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    margin: 100px auto; 
+    background-color: white;
+}
+
+.cell {
+    border: 1px solid whitesmoke;
 }
