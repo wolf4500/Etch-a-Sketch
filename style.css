@@ -7,12 +7,39 @@ body {
     background-color: #DDE3DD;
 }
 
+#title {
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.slider-button-container {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    justify-content: space-between;
+    width: 250px;
+}
+
+#apply-button {
+    padding: 3px;
+    border-radius: 5px;
+    background-color: #FBECDA;
+    border: 1px solid black;
+}
+
+.big-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
 #sketch-area {
     display: flex;
     flex-wrap: wrap;
-    margin: 100px auto; 
     background-color: white;
-    box-shadow: 10px 10px rgba(0, 170, 225, 0.065);
+    box-shadow: 10px 10px rgba(0, 170, 225, 0.1);
 }
 
 .cell {
