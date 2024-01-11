@@ -10,6 +10,23 @@ function fillGrid() {
     this.style.backgroundColor = "black";
 }
 
+function rangeDisplay() {
+    rangeOutput.innerHTML = slider.value + " x " + slider.value;
+}
+
+function changeGrid() {
+
+    // Remove the current grid before placing new one
+    while(sketchArea.firstChild) {
+        sketchArea.removeChild(sketchArea.firstChild);
+    }
+
+    let newGrid = slider.value;
+
+    // Use user-prompted grid size to create new grid
+    createGrid(newGrid);
+}
+
 // Create Grid
 function createGrid(squaresPerSide){
     const totalSquares = squaresPerSide * squaresPerSide;
@@ -29,38 +46,14 @@ function createGrid(squaresPerSide){
     }
 }
 
-// Call createGrid function 
+// Call createGrid function using initial 16 x 16 value
 createGrid(sideLength);
 
-// Changes grid baesd on new slider value
-function changeGrid() {
-
-    // Remove the current grid before placing new one
-    while(sketchArea.firstChild) {
-        sketchArea.removeChild(sketchArea.firstChild);
-    }
-
-    // Prompt user to choose grid size
-    // let newGrid = prompt("Enter a grid size between 1-100 (a X a)");
-    // newGrid = parseInt(newGrid);
-    // console.log(newGrid);
-    // while(newGrid < 0 || newGrid > 100 || newGrid) {
-    //     newGrid = prompt("Enter a valid grid size between 1-100 (a X a)");
-    // }
-    let newGrid = slider.value;
-    // Use user-prompted grid size to create new grid
-    createGrid(newGrid);
-}
-
+// Adjust slider output 
 const slider = document.querySelector(".slider");
 const rangeOutput = document.querySelector("#range-display");
 slider.addEventListener("input", rangeDisplay);
 
-function rangeDisplay() {
-    rangeOutput.innerHTML = slider.value + " x " + slider.value;
-}
-
+// Changes grid based on new slider value
 const button = document.querySelector("#apply-button");
 button.addEventListener("click", changeGrid);
-
-

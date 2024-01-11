@@ -4,13 +4,17 @@
 }
 
 body { 
-    background-color: #DDE3DD;
+    background-color: aliceblue;
 }
 
+@import url('https://fonts.cdnfonts.com/css/arcade-classic');
 #title {
     font-size: 32px;
     margin-top: 20px;
     margin-bottom: 10px;
+    font-family: 'Alanus', sans-serif;    
+    width: 300px;                              
+    text-align: center;
 }
 
 .slider-button-container {
@@ -21,11 +25,16 @@ body {
     width: 250px;
 }
 
+#range-display {
+    font-family: 'Alanus', sans-serif;   
+}
+
 #apply-button {
     padding: 3px;
     border-radius: 5px;
-    background-color: #FBECDA;
+    background-color: whitesmoke;
     border: 1px solid black;
+    font-family: 'Alanus', sans-serif;   
 }
 
 .big-container {
